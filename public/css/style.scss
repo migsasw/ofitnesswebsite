@@ -1,0 +1,465 @@
+//Fonts 
+$Font: 'Poppins', sans-serif; 
+$font-weight-mobile: (
+    "regular": 1rem,
+    "medium": 1.5rem,
+    "large": 2rem,
+    "heroTextOfit": 5rem
+);
+
+$font-weight-desktop: (
+    "small": 1rem,    
+    "regular": 3rem,
+    "joinbtn": 1.5rem,
+    "heroTextOfit": 10.5rem,
+    "heroTextBody": 5rem,
+);
+
+//colors
+$primary: #F8B500;
+$primaryDark: #D19901;
+$accentColorDark: #2D3034;
+$accentColorLight: #F7F7F7;
+$formOutline: #535A64;
+
+//Base styles 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $Font;
+}
+
+body {
+    background:$accentColorDark;
+}
+.f {
+    color: $primary;
+}
+//Login & Registration 
+
+#loginandregistration {
+    background: $primary;
+    a {
+        text-decoration: none;
+        color:$accentColorLight;
+        font-size: 1rem;
+
+        .f {
+            color: $accentColorDark;
+        }
+    }
+    .logo {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    .logo-registration {
+        padding-top: 4em;
+        padding-left: 10%;
+    }
+}
+.formContent {
+    color: $accentColorLight;
+    text-align: center;
+    h1 {
+        margin-top: 4%;
+        line-height: 3em;
+        font-size: 2.5rem;
+    }
+}
+form {
+    display: inline-block;
+} 
+input,
+button {
+    width: 20em;
+    height: 3.125em;
+    border-radius: 0.2em;
+    border: 1px solid $accentColorLight;
+    font-size: map-get($font-weight-mobile, regular);
+}
+input {
+    background: $primaryDark;
+    margin: 0.5rem 0;
+    color: $accentColorLight;
+    padding-left: 1rem;
+}
+button {
+    margin-top: 2rem;
+    background: $accentColorLight;
+    color: $primary;
+    font-weight: bold;
+}
+//User Profile, Workout, Meal Plan Pages
+.userContainer {
+    background: $accentColorDark;
+    display: flex;
+    flex-direction: column;
+    .maincontent  {
+        ul.links {
+            display: none;
+        }
+    }
+}
+a#logout-btn {
+    text-decoration: none;
+    background: $primary;
+    padding: 8px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 2em;
+}
+
+//footer Navbar for mobile devices
+footer .nav {
+    background: $primary;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    ul {
+        width: 80%;
+        margin: 0.5em auto;
+        display: flex;
+        justify-content: space-between;
+        li {
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $accentColorLight;
+                .material-icons {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+.btn.bottomnav {
+    display: none;
+}
+.greeting {
+    p {
+        width: 80%;
+        margin: auto;
+        color: $accentColorLight;
+        padding: 30% 0;
+    }
+}
+.maincontent .mobile-nav {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    p {
+        margin-top: 2rem;
+        color: $accentColorLight;
+        font-size: 1.5rem;
+    }
+}
+#logout-btn {
+    width: 6em;
+    height: 2.25em;
+    background-color: $primary;
+    color: $accentColorLight;
+}
+.maincontent {
+    ul,
+    h1 {
+        width: 80%;
+        margin: auto;
+        color: $primary;
+
+    }
+    ul.plans {
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: $accentColorLight;
+            }
+        }
+    }
+}
+//Desktop/Larger viewing screens
+@media (min-width: 600px) {
+    .userContainer {
+        flex-direction: row;
+        height: 100vh;
+        .greeting {
+            background: $primary;
+            flex: 1;
+            padding-top: 5em;
+        }
+        .maincontent {
+            flex: 3;
+            .mobile-nav {
+                display: none;
+            }
+            .Content-section {
+                margin-top: 15em;
+            }
+            ul.links {
+                display: flex;
+                width: 80%;
+                justify-content: space-between;
+                padding-top: 4em;
+
+                li {
+                    list-style: none;
+                    a {
+                        text-decoration: none;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    } 
+    .nav {
+        display: none;
+    } 
+    .btn.bottomnav {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: 10%;
+        margin-bottom: 8%;
+    }
+}
+//Home Page
+#home-page {
+    .home-page-desktop-navigation,
+    .image,
+    .home-page-mobile-navigation,
+    .motivation,
+    // .pricing,
+    .form-say-something,
+    h1,
+    .contact-information {
+        width: 80%;
+        margin: auto;
+    }
+    //list
+    ul {
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    //btns
+    .btn {
+        border-radius: 6px;
+        font-weight: 600;
+    }
+    #register {
+        padding: 8px 24px;
+        background-color: $primary;
+        color: $accentColorLight;
+        margin-right: 1em;
+    }
+    #login {
+        padding: 8px 37px;
+        color:$primary;
+        background-color: $accentColorLight;
+
+    }
+    //Desktop-nav
+    .home-page-desktop-navigation {
+        display: flex;
+        margin: 5em auto;
+        .buttons {
+            display: none;
+            margin-top: 0.4em;
+        }
+        .logo {
+            flex: 1;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color:$accentColorLight;
+        }
+    }
+    @media (min-width: 767px) {
+        .home-page-desktop-navigation {
+            .buttons {
+                display: flex;
+            }
+        }
+      
+    }
+    //Image 
+    img {
+        width: 100%;
+    }
+    @media (min-width: 767px){
+        img {
+            width: 50%;
+            margin-left: 25%;
+        }
+    }
+    //Mobile-nav
+    .home-page-mobile-navigation{
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        margin: 2em auto;
+    }
+    @media (min-width: 767px) {
+        .home-page-mobile-navigation {
+            display: none;
+        }        
+    }
+    //Motivation 
+    .motivation {
+        color: $primary;
+        font-weight: 600;
+        text-align: center;
+        padding: 30% 0;
+    }
+    @media (min-width: 767px){
+        .motivation {font-size: 1.5rem;}
+    }
+    @media (min-width: 1023px){
+        .motivation {
+            font-size: 2rem;
+            padding: 200px;
+            &:hover {
+                transform: scale(1.2);
+                transition: transform .2s;
+           }  
+        }
+    }
+    //Pricing
+    .pricing {
+        background: $primary;
+        padding: 200px 0;
+        border-radius: 1px 114px;
+        .pricing-info {
+            width: 60%;
+            margin: auto;
+            font-weight: 600;
+        }
+    }
+    @media (min-width: 767px){
+        .pricing {
+            padding: 250px 0;
+            .pricing-info {font-size: 1.5rem;}
+        }
+    }
+    @media (min-width: 1023px){
+        .pricing {
+            padding: 200px 0;
+            border-radius: 1px;
+            margin-top: 10em;
+            .pricing-info {
+                width: 50%;
+                margin-left: 10%;
+                font-size: 2rem;
+                padding-bottom: 5em;
+                P {padding-bottom: 3em}
+            }
+        }
+    }
+    //footer 
+    .form-say-something {
+        margin-top: -20%;
+        width: 70%;
+        background:$accentColorDark;
+        border: 3px solid $formOutline;
+        padding: 30px 20px;
+        border-radius: 1em;
+        h1 {
+            width: 100%;
+            color: $primary;
+        }
+        form {
+            input, textarea {
+                width: 100%;
+                border: 1px solid $primary;
+                background: $accentColorDark;
+                border-radius: 5px;
+                color: $accentColorLight;
+            }
+            textarea {
+                padding: 1em;
+                margin-top: 0.8em;
+            }
+            a {
+                text-decoration: none; 
+                color: $accentColorLight; 
+                font-weight: 600;
+            }
+            .form-btn {
+                background: $primary;
+                padding: 8px 48px;
+                border-radius: 5px;
+            }
+        }
+ 
+    }
+    @media (min-width: 767px){
+        .form-say-something {
+            width: 50%;
+            margin-left: 35%;
+        }
+    }
+    @media (min-width: 1023px){
+        .form-say-something {
+            h1 {
+                padding-bottom: 2em;
+            }
+            padding: 6em 3em;
+            input, textarea {
+                padding: 1em 24em 1em 1em;
+            }
+            textarea {
+                margin-bottom: 2em;
+            }
+            a.form-btn{
+                padding: 0.5em 4em;
+            }
+        }
+    }
+    .get-in-touch {
+        color: $primary;
+        padding: 1em 0;
+    }
+    .contact-information {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            color: $accentColorLight;
+            padding-top: 1em;
+        }
+        a, li{
+            color: $primary;
+        }
+    }
+    .end-tag {
+        background: $accentColorLight;
+        position: absolute;
+        margin-top: 10%;
+        width: 100%;
+        text-align: center;
+        padding: 0.5em 0;
+    }
+    @media (min-width: 767px){
+        .contact-information{
+            width: 70%;
+            margin-left: 10%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    @media (min-width: 1023px){
+        .contact-information{
+            width: 50%;
+            margin-left: 10%;
+        }
+        .get-in-touch {
+            padding-top: 3em;
+        }
+    }
+}

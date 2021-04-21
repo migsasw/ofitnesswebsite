@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+    <section>
+        <div class="userContainer">
+            <div class="greeting">
+                <p>Hello again <b>
+                        <%= name %>
+                    </b> you can do this! Good luck with your new workouts this week.</p>
+            </div>
+            <div class="maincontent">
+                <div class="mobile-nav">
+                    <p>O<span class="f">f</span>it</p>
+                    <a class="btn" href="/logout" id="logout-btn">logout</a>
+                </div>
+                <ul class="links">
+                    <li><a href="user" class="link">O<span>f</span>it</a></li>
+                    <li><a href="user" class="link">Home</a></li>
+                    <li><a href="workouts" class="link">Workouts</a></li>
+                    <li><a href="mealplan" class="link">Meal Plans</a></li>
+                </ul>
+                <div class="Content-section">
+                    <h1>Your Workout Plan.</h1>
+                    <ul class="plans" id="workouts">
+                        <li><b>Week 3:</b> <a href="/images/Workout Plan.pdf" class="plan" id="workout"
+                                target="_blank">Click Here!</a>
+                        </li>
+                        <li><b>Week 4:</b> <a href="#" class="plan" id="workout">Coming soon!</a></li>
+                    </ul>
+                </div>
+
+                <a class="btn bottomnav" href="/logout" id="logout-btn">logout</a>
+            </div>
+        </div>
+    </section>
+    <%- include('partials/footer-authenticated') %>

@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+    <body id="loginandregistration">
+        <div class="logo-registration">
+            <a href="/" class="logo">O<span class="f">f</span>it</a>
+        </div>
+        <section>
+            <div class="formContent" id="login">
+                <div class="form">
+                    <h1>Login</h1>
+                    <form action="/login" method="POST">
+                        <input type="email" id="email" name="username" value="" placeholder="Email Address"><br>
+                        <input type="password" id="pword" name="password" value="" placeholder="Password"><br>
+                        <button type="submit" class="btn" id="registration-btn">Login</button>
+                    </form>
+                </div>
+                <a href="/registration">Register</a>
+            </div>
+        </section>
+    </body>
+
+    <%- include('partials/footer') %>

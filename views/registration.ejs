@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+
+    <body id="loginandregistration">
+        <div class="logo-registration">
+            <a href="/" class="logo">O<span class="f">f</span>it</a>
+        </div>
+        <section>
+            <div class="formContent" id="registration">
+                <div class="form">
+                    <h1>Create Account</h1>
+                    <form action="/registration" method="POST">
+                        <input type="text" id="fname" name="fname" value="" placeholder="First Name" required><br>
+                        <input type="text" id="lname" name="lname" value="" placeholder="Last Name" required><br>
+                        <input type="email" id="email" name="username" value="" placeholder="Email Address"
+                            required><br>
+                        <input type="password" id="pword" name="password" value="" placeholder="Password" required><br>
+                        <button type="submit" class="btn" id="registration-btn">Register</button>
+                    </form>
+                </div>
+                <a href="/login">Login</a>
+            </div>
+        </section>
+    </body>
+
+    <%- include('partials/footer') %>
