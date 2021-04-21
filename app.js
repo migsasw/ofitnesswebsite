@@ -28,8 +28,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+
 //Database Connection
-mongoose.connect("mongodb+srv://admin-miguel:Myfirstlivewebsite123101@cluster0.y2w8m.mongodb.net/ofitnessDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+const dblink = process.env.DBLINK
+mongoose.connect(dblink, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useCreateIndex', true);
 
 //Ofitness Database Schema 
